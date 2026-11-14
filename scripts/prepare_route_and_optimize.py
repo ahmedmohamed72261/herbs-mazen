@@ -47,3 +47,4 @@ for root, dirs, files in os.walk('public/images'):
                     print(f"Failed to optimize {p}: {e}")
 
 print("ALL OPTIMIZATIONS COMPLETE!")
+

@@ -35,3 +35,4 @@ optimize_and_save('scripts/candidates/thyme_wiki.jpg', 'public/images/products/t
 optimize_and_save('scripts/candidates/amber_dropper_2.jpg', 'public/images/products/jojoba_oil.jpg')
 
 print("ALL 8 OIL IMAGES SUCCESSFULLY VERIFIED AND REPLACED!")
+

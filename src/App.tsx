@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { WhatsAppFloat } from './components/WhatsAppFloat';
 import { QuoteModal } from './components/QuoteModal';
+import { Preloader } from './components/Preloader';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -40,6 +41,7 @@ export function App() {
     <LanguageProvider>
       <BrowserRouter>
         <ScrollToTop />
+        <Preloader />
         <div className="flex flex-col min-h-screen bg-white font-sans text-[#1F242C]">
           <Navbar onOpenQuote={() => handleOpenQuote()} />
 

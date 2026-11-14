@@ -25,3 +25,4 @@ for name, url in candidates:
     print(f"Saved {dest}")
 
 print("DONE")
+
