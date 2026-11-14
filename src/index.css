@@ -1,0 +1,1661 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme: #5B9B37;
+  --color-theme-hover: #4b822c;
+  --color-theme-2: #F8BC26;
+  --color-theme-2-hover: #e5aa1c;
+  --color-header: #1F242C;
+  --color-header-dark: #16191f;
+  --color-body-text: #808287;
+  --color-border-color: #E3E3E3;
+  --color-bg-light: #F7F7F7;
+
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-cairo: 'Cairo', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #333F4D;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-cairo), var(--font-sans);
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: var(--font-cairo);
+  letter-spacing: normal;
+}
+
+/* ===================================================
+   SolarGlow Signature UI & Component Styles
+=================================================== */
+
+/* --- 1. Theme Button with Exact Diagonal Wings --- */
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  outline: none;
+  background-color: #5B9B37;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  padding: 14px 36px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.theme-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 35px solid #1F242C;
+  border-bottom: 35px solid #1F242C;
+  border-right: 35px solid transparent;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.theme-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 35px solid #1F242C;
+  border-bottom: 35px solid #1F242C;
+  border-left: 35px solid transparent;
+  transform: translateX(100%);
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.theme-btn:hover {
+  color: #ffffff;
+}
+
+.theme-btn:hover::before {
+  transform: translateX(-20%);
+}
+
+.theme-btn:hover::after {
+  transform: translateX(20%);
+}
+
+.theme-btn.theme-color-2 {
+  background-color: #F8BC26;
+  color: #1F242C;
+}
+
+.theme-btn.theme-color-2:hover {
+  color: #ffffff;
+}
+
+.theme-btn.bg-color {
+  background-color: #333F4D;
+  color: #ffffff;
+}
+
+.theme-btn.bg-color::before {
+  border-top: 35px solid #5B9B37;
+  border-bottom: 35px solid #5B9B37;
+}
+
+.theme-btn.bg-color::after {
+  border-top: 35px solid #5B9B37;
+  border-bottom: 35px solid #5B9B37;
+}
+
+/* --- 2. Section Titles --- */
+.section-title span.sub-title {
+  color: #5B9B37;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.section-title span.sub-title::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #5B9B37;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1F242C;
+  line-height: 1.25;
+  font-family: var(--font-heading);
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 26px;
+  }
+}
+
+/* --- 3. SolarGlow Project Box Items 2 --- */
+.project-box-items-2 {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+}
+
+.project-box-items-2 .project-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-box-items-2 .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-box-items-2:hover .project-image img {
+  transform: scale(1.08);
+}
+
+.project-box-items-2 .project-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #F7F7F7;
+  padding: 24px 28px;
+  right: 50px;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+[dir="rtl"] .project-box-items-2 .project-content {
+  left: 50px;
+  right: 0;
+}
+
+.project-box-items-2 .project-content p {
+  margin-bottom: 4px;
+  color: #5B9B37;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-box-items-2 .project-content h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1F242C;
+  font-family: var(--font-heading);
+  line-height: 1.3;
+}
+
+.project-box-items-2 .project-content h5 a:hover {
+  color: #5B9B37;
+}
+
+.project-box-items-2 .project-content .icon-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  background-color: #5B9B37;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+[dir="rtl"] .project-box-items-2 .project-content .icon-btn {
+  right: auto;
+  left: 25px;
+}
+
+.project-box-items-2 .project-content .icon-btn:hover {
+  background-color: #F8BC26;
+  color: #1F242C;
+}
+
+/* --- 4. Service Card Items from SolarGlow --- */
+.service-card-items {
+  background: #ffffff;
+  border: 1px solid #E8ECEF;
+  border-radius: 0;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-card-items:hover {
+  border-color: #5B9B37;
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 30px rgba(91, 155, 55, 0.15);
+}
+
+.service-card-items .service-image {
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 10;
+}
+
+.service-card-items .service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card-items:hover .service-image img {
+  transform: scale(1.08);
+}
+
+.service-card-items .service-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-card-items .service-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1F242C;
+  font-family: var(--font-heading);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.service-card-items .service-content h3 a:hover {
+  color: #5B9B37;
+}
+
+.service-card-items .service-content p {
+  color: #808287;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* --- 5. SolarGlow Team Box Items --- */
+.team-box-items {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+.team-box-items .team-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 4.5;
+}
+
+.team-box-items .team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.team-box-items:hover .team-image img {
+  transform: scale(1.06);
+}
+
+.team-box-items .team-image .team-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  padding: 22px 28px;
+  background-color: rgba(91, 155, 55, 0.94);
+  transition: background-color 0.3s ease;
+}
+
+.team-box-items .team-image .team-content p {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.team-box-items .team-image .team-content h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  line-height: 1.25;
+}
+
+.team-box-items .team-image .team-content h3 a {
+  color: #ffffff;
+}
+
+.team-box-items .team-image .team-content h3 a:hover {
+  color: #F8BC26;
+}
+
+.team-box-items .team-image .team-content .social-profile {
+  position: absolute;
+  right: 25px;
+  bottom: 22px;
+  z-index: 10;
+}
+
+[dir="rtl"] .team-box-items .team-image .team-content .social-profile {
+  right: auto;
+  left: 25px;
+}
+
+.team-box-items .team-image .team-content .social-profile .plus-btn {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #1F242C;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.team-box-items .team-image .team-content .social-profile:hover .plus-btn {
+  background-color: #F8BC26;
+  color: #1F242C;
+}
+
+/* --- 6. SolarGlow Counter Section & Items --- */
+.counter-section {
+  position: relative;
+  background-color: #1F242C;
+  padding: 90px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.counter-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(31, 36, 44, 0.92);
+}
+
+.counter-wrapper {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 991px) {
+  .counter-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .counter-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.counter-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.counter-items .icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #5B9B37;
+}
+
+.counter-items .content h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #F8BC26;
+  font-family: var(--font-heading);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.counter-items .content p {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* --- 7. SolarGlow Footer Structure & Styles --- */
+.footer-section.footer-bg {
+  background-color: #1F242C;
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+.footer-widgets-wrapper {
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.single-footer-widget .widget-head {
+  margin-bottom: 30px;
+}
+
+.single-footer-widget .widget-head h4 {
+  font-size: 20px;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  position: relative;
+  padding-bottom: 18px;
+  font-weight: 700;
+}
+
+.single-footer-widget .widget-head h4::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #5B9B37;
+}
+
+[dir="rtl"] .single-footer-widget .widget-head h4::before {
+  left: auto;
+  right: 0;
+}
+
+.single-footer-widget .footer-content p {
+  color: #808287;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.single-footer-widget .social-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.single-footer-widget .social-icon a {
+  background-color: #222832;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.single-footer-widget .social-icon a:hover {
+  background-color: #5B9B37;
+  color: #ffffff;
+}
+
+.single-footer-widget .list-area li {
+  margin-bottom: 12px;
+}
+
+.single-footer-widget .list-area li a {
+  color: #808287;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.single-footer-widget .list-area li a:hover {
+  color: #5B9B37;
+  padding-left: 6px;
+}
+
+[dir="rtl"] .single-footer-widget .list-area li a:hover {
+  padding-left: 0;
+  padding-right: 6px;
+}
+
+/* Footer Gallery (6 thumbnails from SolarGlow) */
+.footer-gallery .gallery-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.footer-gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 1;
+}
+
+.footer-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.footer-gallery .gallery-item:hover img {
+  transform: scale(1.15);
+}
+
+.footer-gallery .gallery-item .icon {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(91, 155, 55, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 18px;
+}
+
+.footer-gallery .gallery-item:hover .icon {
+  opacity: 1;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid #333F4D;
+  padding: 24px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-bottom-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom-wrapper p {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-bottom-wrapper p span {
+  color: #5B9B37;
+}
+
+.footer-bottom-wrapper .footer-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-bottom-wrapper .footer-menu li a {
+  color: #808287;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-wrapper .footer-menu li a:hover {
+  color: #5B9B37;
+}
+
+/* --- 8. SolarGlow Page Banner & Breadcrumb --- */
+.page-banner-wrap {
+  background-color: #5B9B37;
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.page-banner-wrap::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(91, 155, 55, 0.88);
+  z-index: -1;
+}
+
+.page-banner-wrap h1 {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 46px;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 768px) {
+  .page-banner-wrap {
+    padding: 60px 0;
+  }
+
+  .page-banner-wrap h1 {
+    font-size: 30px;
+  }
+}
+
+.breadcrumb-wrapper {
+  background-color: #F7F7F7;
+  padding: 18px 0;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.breadcrumb-wrapper .breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1F242C;
+}
+
+.breadcrumb-wrapper .breadcrumb-nav a {
+  color: #5B9B37;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-wrapper .breadcrumb-nav a:hover {
+  color: #F8BC26;
+}
+
+.breadcrumb-wrapper .breadcrumb-nav .separator {
+  color: #9CA3AF;
+  font-size: 13px;
+}
+
+/* --- 9. SolarGlow Hero Section --- */
+.hero-section.hero-1 {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-1 .hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.hero-1 .hero-image::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, rgba(91, 155, 55, 0.90) 33.64%, rgba(91, 155, 55, 0.85) 50%, rgba(31, 36, 44, 0.70) 100%);
+  z-index: -1;
+}
+
+[dir="rtl"] .hero-1 .hero-image::before {
+  background: linear-gradient(270deg, rgba(91, 155, 55, 0.90) 33.64%, rgba(91, 155, 55, 0.85) 50%, rgba(31, 36, 44, 0.70) 100%);
+}
+
+.hero-1 .hero-content {
+  padding: 140px 0;
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.hero-1 .hero-content h6 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #F8BC26;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-1 .hero-content h1 {
+  font-size: 52px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  line-height: 1.22;
+  color: #ffffff;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .hero-1 .hero-content {
+    padding: 80px 0;
+  }
+
+  .hero-1 .hero-content h1 {
+    font-size: 32px;
+  }
+}
+
+.hero-1 .hero-button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+/* --- 10. SolarGlow Work Process Cards --- */
+.work-process-card-items {
+  border: 1px solid #E3E3E3;
+  border-radius: 6px;
+  padding: 36px 30px;
+  background-color: #ffffff;
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-process-card-items:hover {
+  border-color: #5B9B37;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(91, 155, 55, 0.12);
+}
+
+.work-process-card-items h2.step-number {
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #5B9B37;
+  -webkit-text-fill-color: transparent;
+  font-size: 56px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.work-process-card-items h5 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1F242C;
+  font-family: var(--font-heading);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.work-process-card-items p {
+  color: #808287;
+  font-size: 14px;
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+/* --- 11. SolarGlow Single Contact Cards --- */
+.single-contact-card {
+  background-color: #F8F8F8;
+  padding: 40px;
+  border-radius: 6px;
+  transition: all 0.35s ease-in-out;
+  border: 1px solid #EAEAEA;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.single-contact-card:hover {
+  background-color: #1F242C;
+  border-color: #1F242C;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(31, 36, 44, 0.2);
+}
+
+.single-contact-card .top-part {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.single-contact-card .top-part .icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #1F242C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.single-contact-card:hover .top-part .icon {
+  background-color: #5B9B37;
+  color: #ffffff;
+}
+
+.single-contact-card .top-part .title h4 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1F242C;
+  font-family: var(--font-heading);
+  margin-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.single-contact-card .top-part .title span {
+  font-size: 13px;
+  color: #808287;
+  transition: color 0.3s ease;
+}
+
+.single-contact-card:hover .top-part .title h4,
+.single-contact-card:hover .top-part .title span {
+  color: #ffffff;
+}
+
+.single-contact-card .bottom-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #EAEAEA;
+  padding-top: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.single-contact-card:hover .bottom-part {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.single-contact-card .bottom-part .info p {
+  color: #1F242C;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.single-contact-card:hover .bottom-part .info p {
+  color: #F8BC26;
+}
+
+.single-contact-card .bottom-part .icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #1F242C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.single-contact-card:hover .bottom-part .icon {
+  background-color: #5B9B37;
+  color: #ffffff;
+}
+
+/* --- 12. SolarGlow Testimonials Cards --- */
+.testimonial-card-items {
+  background-color: #ffffff;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card-items .client-img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.testimonial-card-items .client-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #5B9B37;
+}
+
+.testimonial-card-items .client-img .quote-icon {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #F8BC26;
+  color: #1F242C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.testimonial-card-items p {
+  color: #4B5563;
+  font-size: 15px;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.testimonial-card-items .client-info span {
+  font-size: 13px;
+  color: #5B9B37;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.testimonial-card-items .client-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1F242C;
+  font-family: var(--font-heading);
+  margin: 0;
+}
+
+/* --- 13. General SolarGlow Section Utilities --- */
+.section-padding {
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+.section-bg {
+  background-color: #F7F7F7;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5B9B37;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.link-btn:hover {
+  color: #F8BC26;
+  gap: 12px;
+}
+
+/* ===================================================
+   SolarGlow Home 2 (index-2.html) Distinctive Styles
+=================================================== */
+
+/* --- 14. Hero 2 Typography & Badge --- */
+.hero-section.hero-2 {
+  min-height: 720px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(16, 26, 19, 0.88) 0%, rgba(16, 26, 19, 0.72) 48%, rgba(16, 26, 19, 0.32) 100%);
+  z-index: 1;
+}
+
+[dir="rtl"] .hero-2::before {
+  background: linear-gradient(270deg, rgba(16, 26, 19, 0.88) 0%, rgba(16, 26, 19, 0.72) 48%, rgba(16, 26, 19, 0.32) 100%);
+}
+
+.hero-2 .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-2 .hero-content h1 span {
+  color: #F8BC26;
+  position: relative;
+}
+
+/* Floating Trust Bar below Hero 2 */
+.hero-trust-bar {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+/* --- 15. Service Box Items (Home 2) with Flip Image --- */
+.service-box-items {
+  background-color: #ffffff;
+  border: 1px solid #E3E3E3;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.service-box-items:hover {
+  border-color: #5B9B37;
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 30px rgba(91, 155, 55, 0.14);
+}
+
+.service-box-items .service-content {
+  padding: 36px 32px 30px;
+  flex-grow: 1;
+}
+
+.service-box-items .service-content .icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background-color: rgba(91, 155, 55, 0.1);
+  color: #5B9B37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.service-box-items:hover .service-content .icon-wrap {
+  background-color: #5B9B37;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.service-box-items .service-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1F242C;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.service-box-items .service-content h3 a:hover {
+  color: #5B9B37;
+}
+
+.service-box-items .service-content ul {
+  margin: 18px 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.service-box-items .service-content ul li {
+  position: relative;
+  padding-left: 18px;
+  color: #4B5563;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+[dir="rtl"] .service-box-items .service-content ul li {
+  padding-left: 0;
+  padding-right: 18px;
+}
+
+.service-box-items .service-content ul li::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  content: "";
+  background-color: #F8BC26;
+}
+
+[dir="rtl"] .service-box-items .service-content ul li::before {
+  left: auto;
+  right: 0;
+}
+
+.service-box-items .service-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background-color: #f3f4f6;
+}
+
+.service-box-items .service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-box-items:hover .service-image img {
+  transform: scale(1.08);
+}
+
+/* --- 16. Feature Section & Circular Counters (Home 2) --- */
+.feature-wrapper .feature-content .list {
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-wrapper .feature-content .list li {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1F242C;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.circle-progress-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.single-circle-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.single-circle-bar .circle-chart {
+  width: 88px;
+  height: 88px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* --- 17. Project Section (Home 2) Seamless Grid --- */
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: #1F242C;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, opacity 0.4s ease;
+  opacity: 0.88;
+}
+
+.project-thumb:hover img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.project-thumb .project-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(0deg, rgba(31, 36, 44, 0.95) 0%, rgba(31, 36, 44, 0.6) 60%, transparent 100%);
+  color: #ffffff;
+  transition: all 0.4s ease;
+  z-index: 2;
+}
+
+.project-thumb .project-content p {
+  color: #F8BC26;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.project-thumb .project-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* --- 18. CTA Contact Green Banner (Home 2) --- */
+.cta-contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-contact-wrapper {
+  background: linear-gradient(135deg, #5B9B37 0%, #447a27 100%);
+  padding: 60px;
+  border-radius: 8px;
+  position: relative;
+  color: #ffffff;
+  box-shadow: 0 20px 45px rgba(91, 155, 55, 0.25);
+}
+
+@media (max-width: 768px) {
+  .cta-contact-wrapper {
+    padding: 36px 24px;
+  }
+}
+
+/* --- 19. About Card Items (Counters Home 2) --- */
+.about-card-items {
+  background-color: #ffffff;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  padding: 40px 24px;
+  text-align: center;
+  transition: all 0.35s ease;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.about-card-items:hover {
+  border-color: #5B9B37;
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 30px rgba(91, 155, 55, 0.12);
+}
+
+.about-card-items .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(91, 155, 55, 0.1);
+  color: #5B9B37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.about-card-items:hover .icon {
+  background-color: #5B9B37;
+  color: #ffffff;
+}
+
+.about-card-items .content h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1F242C;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.about-card-items .content p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* --- 20. Work Process Box Items (Home 2) --- */
+.work-process-box-items {
+  background-color: #ffffff;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  padding: 32px 28px;
+  transition: all 0.35s ease;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-process-box-items:hover {
+  border-color: #5B9B37;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(91, 155, 55, 0.1);
+}
+
+.work-process-box-items .post-cat {
+  background-color: #5B9B37;
+  color: #ffffff;
+  padding: 4px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.work-process-box-items .icon-items {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.work-process-box-items .icon-items .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(91, 155, 55, 0.1);
+  color: #5B9B37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.work-process-box-items .icon-items h5 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1F242C;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.work-process-box-items p {
+  color: #6B7280;
+  font-size: 14px;
+  line-height: 1.65;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+/* --- 21. News Box Items (Home 2) --- */
+.news-box-items {
+  background-color: #ffffff;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.news-box-items:hover {
+  border-color: #5B9B37;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(91, 155, 55, 0.12);
+}
+
+.news-box-items .news-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-box-items .news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.news-box-items:hover .news-image img {
+  transform: scale(1.08);
+}
+
+.news-box-items .news-content {
+  padding: 28px;
+  position: relative;
+}
+
+.news-box-items .news-content .cat {
+  background-color: #5B9B37;
+  color: #ffffff;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.news-box-items .news-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1F242C;
+  margin-bottom: 14px;
+  line-height: 1.4;
+  border-bottom: 1px solid #EAEAEA;
+  padding-bottom: 14px;
+}
+
+.news-box-items .news-content h3 a:hover {
+  color: #5B9B37;
+}
+
+/* ========================================================
+   SolarGlow Sidebar & Filter Widget Styles (LTR & RTL)
+======================================================== */
+.main-sidebar .single-sidebar-widget {
+  border: 1px solid #EBEBEB;
+  box-sizing: border-box;
+  padding: 24px;
+  margin-bottom: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.main-sidebar .single-sidebar-widget:last-child {
+  margin-bottom: 0;
+}
+
+.main-sidebar .single-sidebar-widget .wid-title {
+  margin-bottom: 20px;
+  position: relative;
+  padding-inline-start: 38px;
+}
+
+.main-sidebar .single-sidebar-widget .wid-title h3 {
+  font-weight: 700;
+  font-size: 18px;
+  font-family: var(--font-heading);
+  color: #1F242C;
+  line-height: 1.2;
+}
+
+.main-sidebar .single-sidebar-widget .wid-title::before {
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  height: 4px;
+  width: 18px;
+  border-radius: 4px;
+  position: absolute;
+  background-color: #5B9B37;
+}
+
+.main-sidebar .single-sidebar-widget .wid-title::after {
+  inset-inline-start: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #F8BC26;
+}
+
+/* SolarGlow Category List in Sidebar */
+.sidebar-category-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: #F9FAFB;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1F242C;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  width: 100%;
+  text-align: start;
+}
+
+.sidebar-category-link:hover {
+  background-color: #F0FDF4;
+  border-color: #BBF7D0;
+  color: #15803D;
+  transform: translateX(3px);
+}
+
+[dir="rtl"] .sidebar-category-link:hover {
+  transform: translateX(-3px);
+}
+
+.sidebar-category-link.active {
+  background-color: #5B9B37;
+  color: #ffffff;
+  border-color: #5B9B37;
+  box-shadow: 0 4px 12px rgba(91, 155, 55, 0.25);
+}
+
+.sidebar-category-link .badge-count {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #E5E7EB;
+  color: #4B5563;
+  transition: all 0.25s ease;
+}
+
+.sidebar-category-link:hover .badge-count {
+  background: #DCFCE7;
+  color: #15803D;
+}
+
+.sidebar-category-link.active .badge-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* SolarGlow Contact Desk in Sidebar */
+.sidebar-contact-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, #1F242C 0%, #2A313C 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.sidebar-contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(91, 155, 55, 0.35), transparent 70%);
+  pointer-events: none;
+}

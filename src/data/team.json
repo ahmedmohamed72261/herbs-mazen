@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name_en": "Soltan Samy",
+    "name_ar": "سلطان سامي",
+    "position_en": "Chief Executive Officer & Founder",
+    "position_ar": "الرئيس التنفيذي والمؤسس",
+    "bio_en": "Pioneering the export of premium Egyptian organic herbs and botanicals to international markets. Leading Noureslam Herbs' global trade relations, contract farming standards in Beni Suef, and long-term partnerships across Europe, North America, and the Gulf.",
+    "bio_ar": "يقود استراتيجية تصدير أجود الأعشاب والنباتات الطبية المصرية إلى الأسواق العالمية. يشرف على الشراكات الدولية وتطبيق أعلى معايير الزراعة التعاقدية في بني سويف وعقود التوريد المباشرة لأوروبا وأمريكا الشمالية ودول الخليج.",
+    "image": "/images/team/Soltan_Samy.jpeg",
+    "email": "ceo@noureslamherbs.com",
+    "phone": "+20 102 389 1035",
+    "specialty": "Strategic Partnerships & Global Herb Export"
+  },
+  {
+    "id": 2,
+    "name_en": "Ahmed Samy",
+    "name_ar": "أحمد سامي",
+    "position_en": "Head of International Sales",
+    "position_ar": "رئيس قطاع المبيعات والتصدير",
+    "bio_en": "Direct point of contact for international buyers, importers, and food processors worldwide. Directing global quotations, container bookings, custom harvest allocations, and end-to-end client satisfaction from inquiry to ocean delivery.",
+    "bio_ar": "نقطة الاتصال المباشرة مع المستوردين العالميين وكبرى شركات الصناعات الغذائية والدوائية. يدير عروض الأسعار الدولية، وتجهيز الحاويات وشحنات المواسم، وضمان أسرع استجابة وتواصل على مدار الساعة.",
+    "image": "/images/team/Ahmed_Samy.jpeg",
+    "email": "sales@noureslamherbs.com",
+    "phone": "+20 127 820 1346",
+    "specialty": "Client Negotiations, Fast Quotations & Order Delivery"
+  }
+]

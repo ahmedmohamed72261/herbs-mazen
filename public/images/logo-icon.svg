@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="iconGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6DB343" />
+      <stop offset="100%" stop-color="#448025" />
+    </linearGradient>
+    <linearGradient id="iconGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD15C" />
+      <stop offset="100%" stop-color="#E5A617" />
+    </linearGradient>
+    <linearGradient id="iconLeaf" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5B9B37" />
+      <stop offset="100%" stop-color="#8CE058" />
+    </linearGradient>
+    <radialGradient id="iconBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#28303B" />
+      <stop offset="100%" stop-color="#191D24" />
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded Background Shield -->
+  <rect x="4" y="4" width="92" height="92" rx="24" fill="url(#iconBg)" stroke="#5B9B37" stroke-width="2" />
+
+  <!-- Outer Sunburst Radiant Halo Ring (Nour) -->
+  <circle cx="50" cy="50" r="38" stroke="url(#iconGold)" stroke-width="2" stroke-dasharray="4 3" opacity="0.85" />
+
+  <!-- Botanical Ring Arc -->
+  <path d="M 22 58 C 20 40, 32 20, 54 18 C 70 17, 82 26, 84 42" fill="none" stroke="url(#iconGreen)" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Golden Sunburst Starlet Top Accent -->
+  <circle cx="50" cy="14" r="4.5" fill="url(#iconGold)" />
+
+  <!-- Left Herbal Leaf -->
+  <path d="M 50 80 C 34 74, 22 60, 26 40 C 38 38, 52 52, 50 80 Z" fill="url(#iconGreen)" />
+  <path d="M 34 50 C 40 56, 46 64, 50 80" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+  <!-- Right Herbal Leaf -->
+  <path d="M 50 80 C 66 72, 78 54, 72 32 C 56 32, 44 48, 50 80 Z" fill="url(#iconLeaf)" />
+  <path d="M 66 44 C 60 56, 54 66, 50 80" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+  <!-- Center Sprout Shoot & Golden Seed -->
+  <path d="M 50 80 L 50 36 C 50 30, 54 26, 56 24" fill="none" stroke="url(#iconGold)" stroke-width="3" stroke-linecap="round" />
+  <circle cx="57" cy="22" r="3.5" fill="url(#iconGold)" />
+</svg>
+

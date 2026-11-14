@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "slug": "herbs",
+    "name_en": "Herbs",
+    "name_ar": "أعشاب",
+    "description_en": "Certified organic culinary and medicinal herbs grown under the Egyptian sun, processed with multi-stage optical grading.",
+    "description_ar": "أعشاب عطرية وطهوية وطبية عضوية معتمدة من حوض النيل بمصر، مجهزة بأحدث خطوط الفرز الضوئي.",
+    "image": "/images/category/herbs.jpg"
+  },
+  {
+    "id": 2,
+    "slug": "seeds",
+    "name_en": "Seeds",
+    "name_ar": "بذور",
+    "description_en": "Premium quality aromatic, culinary, and oil seeds triple-cleaned and compliant with international pharmacopoeias.",
+    "description_ar": "بذور عطرية وزيتية عالية النقاء مفرزة ومطابقة للمواصفات القياسية الدولية ودستور الأدوية الأوروبي.",
+    "image": "/images/category/seeds.jpg"
+  },
+  {
+    "id": 3,
+    "slug": "spices",
+    "name_en": "Spices",
+    "name_ar": "توابل وبهارات",
+    "description_en": "Vibrant dehydrated and whole Egyptian spices packed with essential oils and authentic flavor.",
+    "description_ar": "توابل وبهارات مصرية فاخرة غنية بالزيوت العطرية والنكهات الأصيلة للأسواق العالمية.",
+    "image": "/images/category/spices.jpg"
+  },
+  {
+    "id": 4,
+    "slug": "oils",
+    "name_en": "Essential & Botanical Oils",
+    "name_ar": "الزيوت العطرية والطبية",
+    "description_en": "100% Pure steam-distilled essential oils and virgin cold-pressed botanical carrier oils, laboratory-verified for GC/MS therapeutic potency.",
+    "description_ar": "زيوت عطرية نقية 100% مقطرة بالبخار وزيوت نباتية بكر معصورة على البارد، مفحوصة كروماتوجرافياً للصناعات الدوائية والعطرية العالمية.",
+    "image": "/images/category/oils.jpg"
+  }
+]
