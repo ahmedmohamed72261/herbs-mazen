@@ -953,28 +953,38 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
                   return (
                     <div
                       key={idx}
-                      className="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300"
+                      className={`border rounded-xl overflow-hidden transition-all duration-300 ${
+                        isOpen ? 'border-[#5B9B37]/40 ring-1 ring-[#5B9B37]/20 shadow-md' : 'border-gray-200'
+                      }`}
                     >
                       <button
                         type="button"
                         onClick={() => setActiveFaq(isOpen ? null : idx)}
-                        className="w-full py-4 px-6 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#1F242C] hover:text-[#5B9B37] bg-gray-50 transition-colors"
+                        className={`w-full py-4 px-6 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base bg-gray-50 transition-colors ${
+                          isOpen ? 'text-[#5B9B37]' : 'text-[#1F242C] hover:text-[#5B9B37]'
+                        }`}
                       >
                         <span className={isRTL ? 'text-right' : 'text-left'}>
                           {language === 'ar' ? item.q_ar : item.q_en}
                         </span>
                         <ChevronDown
-                          className={`w-5 h-5 shrink-0 transition-transform duration-300 ${
+                          className={`w-5 h-5 shrink-0 transition-transform duration-300 ease-in-out ${
                             isOpen ? 'rotate-180 text-[#5B9B37]' : 'text-gray-400'
                           }`}
                         />
                       </button>
 
-                      {isOpen && (
-                        <div className="p-6 bg-white border-t border-gray-100 text-xs sm:text-sm text-gray-600 leading-relaxed">
-                          {language === 'ar' ? item.a_ar : item.a_en}
+                      <div
+                        className={`grid transition-all duration-300 ease-in-out ${
+                          isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                        }`}
+                      >
+                        <div className="overflow-hidden">
+                          <div className="p-6 bg-white border-t border-gray-100 text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            {language === 'ar' ? item.a_ar : item.a_en}
+                          </div>
                         </div>
-                      )}
+                      </div>
                     </div>
                   );
                 })}

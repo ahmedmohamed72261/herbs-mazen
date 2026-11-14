@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import {
   Phone,
   Mail,
@@ -23,12 +24,31 @@ export const ContactPage: React.FC = () => {
   const Arrow = isRTL ? ArrowLeft : ArrowRight;
 
   const [submitted, setSubmitted] = useState(false);
+  const [searchParams] = useSearchParams();
+  const productParam = searchParams.get('product');
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    message: '',
+    message: productParam
+      ? (language === 'ar'
+          ? `طلب تسعير ومواصفات بخصوص: ${productParam}`
+          : `Quote inquiry regarding: ${productParam}`)
+      : '',
   });
+
+  useEffect(() => {
+    if (productParam) {
+      setFormData((prev) => ({
+        ...prev,
+        message:
+          language === 'ar'
+            ? `طلب تسعير ومواصفات بخصوص: ${productParam}`
+            : `Quote inquiry regarding: ${productParam}`,
+      }));
+    }
+  }, [productParam, language]);
 
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
 
@@ -91,7 +111,7 @@ export const ContactPage: React.FC = () => {
             <div className="single-contact-card">
               <div className="top-part">
                 <div className="icon">
-                  <Mail className="w-7 h-7 text-[#5B9B37]" />
+                  <Mail className="w-7 h-7" />
                 </div>
                 <div className="title">
                   <h4>{language === 'ar' ? 'البريد الإلكتروني' : 'Email Address'}</h4>
@@ -118,7 +138,7 @@ export const ContactPage: React.FC = () => {
             <div className="single-contact-card">
               <div className="top-part">
                 <div className="icon">
-                  <Phone className="w-7 h-7 text-[#5B9B37]" />
+                  <Phone className="w-7 h-7" />
                 </div>
                 <div className="title">
                   <h4>{language === 'ar' ? 'أرقام الهاتف' : 'Phone Number'}</h4>
@@ -147,7 +167,7 @@ export const ContactPage: React.FC = () => {
             <div className="single-contact-card">
               <div className="top-part">
                 <div className="icon">
-                  <MapPin className="w-7 h-7 text-[#5B9B37]" />
+                  <MapPin className="w-7 h-7" />
                 </div>
                 <div className="title">
                   <h4>{language === 'ar' ? 'مقر الإدارة والمصنع' : 'Office Address'}</h4>
@@ -307,25 +327,36 @@ export const ContactPage: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-md border border-gray-200 overflow-hidden shadow-sm"
+                  className={`bg-white rounded-md border transition-all duration-300 shadow-sm ${
+                    isOpen ? 'border-[#5B9B37]/40 ring-1 ring-[#5B9B37]/20 shadow-md' : 'border-gray-200'
+                  }`}
                 >
                   <button
                     type="button"
                     onClick={() => setActiveFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-start font-bold text-sm sm:text-base text-[#1F242C] flex items-center justify-between gap-4 hover:text-[#5B9B37] transition-colors"
+                    className={`w-full p-5 text-start font-bold text-sm sm:text-base flex items-center justify-between gap-4 transition-colors ${
+                      isOpen ? 'text-[#5B9B37]' : 'text-[#1F242C] hover:text-[#5B9B37]'
+                    }`}
                   >
                     <span>{language === 'ar' ? faq.q_ar : faq.q_en}</span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#5B9B37] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
-                        }`}
+                      className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ease-in-out ${
+                        isOpen ? 'rotate-180 text-[#5B9B37]' : 'text-gray-400'
+                      }`}
                     />
                   </button>
 
-                  {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
-                      {language === 'ar' ? faq.a_ar : faq.a_en}
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
+                        {language === 'ar' ? faq.a_ar : faq.a_en}
+                      </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               );
             })}

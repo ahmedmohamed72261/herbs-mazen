@@ -17,10 +17,10 @@ import { useLanguage } from '../context/LanguageContext';
 import { Logo } from './Logo';
 
 interface NavbarProps {
-  onOpenQuote: () => void;
+  onOpenQuote?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
+export const Navbar: React.FC<NavbarProps> = () => {
   const { language, setLanguage, isRTL, t } = useLanguage();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -89,8 +89,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
               <button
                 onClick={() => setLanguage('en')}
                 className={`px-2.5 py-0.5 rounded-full font-bold transition-all ${language === 'en'
-                    ? 'bg-[#5B9B37] text-white shadow-sm'
-                    : 'text-gray-300 hover:text-white'
+                  ? 'bg-[#5B9B37] text-white shadow-sm'
+                  : 'text-gray-300 hover:text-white'
                   }`}
               >
                 EN
@@ -98,8 +98,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
               <button
                 onClick={() => setLanguage('ar')}
                 className={`px-2.5 py-0.5 rounded-full font-bold transition-all ${language === 'ar'
-                    ? 'bg-[#5B9B37] text-white shadow-sm'
-                    : 'text-gray-300 hover:text-white'
+                  ? 'bg-[#5B9B37] text-white shadow-sm'
+                  : 'text-gray-300 hover:text-white'
                   }`}
               >
                 عربي
@@ -112,8 +112,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
       {/* Main Header / Navigation */}
       <nav
         className={`w-full bg-white transition-all duration-300 ${isScrolled
-            ? 'sticky top-0 shadow-lg border-b border-gray-100 py-3'
-            : 'border-b border-gray-100 py-4'
+          ? 'sticky top-0 shadow-lg border-b border-gray-100 py-3'
+          : 'border-b border-gray-100 py-4'
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -129,8 +129,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                   key={link.path}
                   to={link.path}
                   className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 relative ${isActive
-                      ? 'text-[#5B9B37] font-bold bg-[#5B9B37]/10'
-                      : 'text-gray-700 hover:text-[#5B9B37] hover:bg-gray-50'
+                    ? 'text-[#5B9B37] font-bold bg-[#5B9B37]/10'
+                    : 'text-gray-700 hover:text-[#5B9B37] hover:bg-gray-50'
                     }`}
                 >
                   {link.name}
@@ -157,13 +157,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
 
             {/* SolarGlow Get A Quote CTA button (Desktop only, mobile has it inside drawer) */}
             <div className="hidden lg:block">
-              <button
-                onClick={onOpenQuote}
+              <Link
+                to="/contact"
                 className="theme-btn !py-2.5 !px-5 !text-xs sm:!text-sm uppercase tracking-wider"
               >
                 <span>{language === 'ar' ? 'طلب عرض سعر' : 'Get A Quote'}</span>
                 <Arrow className="w-4 h-4 text-[#F8BC26]" />
-              </button>
+              </Link>
             </div>
 
             {/* Hamburger Toggle - Always visible and prominent on mobile & tablet */}
@@ -211,8 +211,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                     key={link.path}
                     to={link.path}
                     className={`block px-4 py-2.5 rounded-lg text-sm font-bold transition-colors ${isActive
-                        ? 'bg-[#5B9B37] text-white shadow-sm'
-                        : 'text-gray-800 hover:bg-gray-50 hover:text-[#5B9B37]'
+                      ? 'bg-[#5B9B37] text-white shadow-sm'
+                      : 'text-gray-800 hover:bg-gray-50 hover:text-[#5B9B37]'
                       }`}
                   >
                     {link.name}
@@ -223,23 +223,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
 
             {/* Drawer Bottom Actions */}
             <div className="pt-4 border-t border-gray-100 space-y-3">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenQuote();
-                }}
+              <Link
+                to="/contact"
+                onClick={() => setMobileMenuOpen(false)}
                 className="theme-btn-clip w-full py-3 bg-[#5B9B37] hover:bg-[#4b822c] text-white rounded-lg text-sm font-bold shadow-md shadow-[#5B9B37]/30 flex items-center justify-center gap-2"
               >
                 <span>{language === 'ar' ? 'طلب عرض سعر سريع' : 'Get A Quote'}</span>
                 <Arrow className="w-4 h-4 text-[#F8BC26]" />
-              </button>
+              </Link>
 
               <div className="flex items-center justify-center gap-3 pt-2">
                 <button
                   onClick={() => setLanguage('en')}
                   className={`px-4 py-1.5 rounded-md text-xs font-bold ${language === 'en'
-                      ? 'bg-[#1F242C] text-white'
-                      : 'bg-gray-100 text-gray-700'
+                    ? 'bg-[#1F242C] text-white'
+                    : 'bg-gray-100 text-gray-700'
                     }`}
                 >
                   English
@@ -247,8 +245,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
                 <button
                   onClick={() => setLanguage('ar')}
                   className={`px-4 py-1.5 rounded-md text-xs font-bold ${language === 'ar'
-                      ? 'bg-[#1F242C] text-white'
-                      : 'bg-gray-100 text-gray-700'
+                    ? 'bg-[#1F242C] text-white'
+                    : 'bg-gray-100 text-gray-700'
                     }`}
                 >
                   العربية

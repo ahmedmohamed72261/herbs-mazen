@@ -19,9 +19,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onRequestQuot
     ? product.short_description_ar || product.description_ar
     : product.short_description_en || product.description_en;
 
-  const categoryName = product.category
-    ? (language === 'ar' ? product.category.name_ar : product.category.name_en)
-    : (language === 'ar' ? 'أعشاب ونباتات' : 'Herbal Botanicals');
+  const cardCategoryName = product.category?.slug === 'oils'
+    ? (language === 'ar' ? 'زيوت طبيعية' : 'Botanical Oils')
+    : product.category
+      ? (language === 'ar' ? product.category.name_ar : product.category.name_en)
+      : (language === 'ar' ? 'أعشاب' : 'Herbs');
 
   const detailUrl = `/products/${product.slug || product.id}`;
 
@@ -41,16 +43,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onRequestQuot
           />
         </Link>
 
-        {/* Category Pill - SolarGlow Vibrant Green */}
-        <span className="absolute top-3 start-3 bg-[#5B9B37] text-white text-[11px] font-extrabold px-3 py-1 uppercase tracking-wider rounded-[3px] shadow-sm">
-          {categoryName}
-        </span>
+        {/* Top Badges Flex Bar: Category Pill & Purity Seal */}
+        <div className="absolute top-2.5 inset-x-2.5 flex items-center justify-between gap-1.5 z-10 pointer-events-none">
+          {/* Category Pill - SolarGlow Vibrant Green */}
+          <span className="bg-[#5B9B37] text-white text-[10px] font-extrabold px-2.5 py-0.5 uppercase tracking-wider rounded-[3px] shadow-sm truncate max-w-[58%]">
+            {cardCategoryName}
+          </span>
 
-        {/* Purity / Organic Badge - SolarGlow Dark + Gold */}
-        <span className="absolute top-3 end-3 bg-[#1F242C]/90 backdrop-blur-sm text-[#F8BC26] text-[11px] font-bold px-2.5 py-1 rounded-[3px] shadow-sm flex items-center gap-1">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#5B9B37]" />
-          <span>{product.purity || (language === 'ar' ? 'نقاء 99%' : '99% Purity')}</span>
-        </span>
+          {/* Purity / Organic Badge - SolarGlow Dark + Gold */}
+          <span className="bg-[#1F242C]/90 backdrop-blur-sm text-[#F8BC26] text-[10px] font-bold px-2 py-0.5 rounded-[3px] shadow-sm flex items-center gap-1 shrink-0">
+            <ShieldCheck className="w-3 h-3 text-[#5B9B37]" />
+            <span>{product.purity || (language === 'ar' ? 'نقاء 99%' : '99% Purity')}</span>
+          </span>
+        </div>
 
         {/* Bottom subtle gradient on image */}
         <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />

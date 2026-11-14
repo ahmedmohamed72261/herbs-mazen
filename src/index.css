@@ -904,7 +904,7 @@ h6 {
   height: 65px;
   border-radius: 50%;
   background-color: #ffffff;
-  color: #1F242C;
+  color: #5B9B37;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -913,9 +913,19 @@ h6 {
   transition: all 0.3s ease;
 }
 
+.single-contact-card .top-part .icon svg {
+  color: #5B9B37;
+  transition: color 0.3s ease, stroke 0.3s ease;
+}
+
 .single-contact-card:hover .top-part .icon {
   background-color: #5B9B37;
   color: #ffffff;
+}
+
+.single-contact-card:hover .top-part .icon svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 .single-contact-card .top-part .title h4 {
@@ -975,9 +985,19 @@ h6 {
   transition: all 0.3s ease;
 }
 
+.single-contact-card .bottom-part .icon svg {
+  color: #1F242C;
+  transition: color 0.3s ease, stroke 0.3s ease;
+}
+
 .single-contact-card:hover .bottom-part .icon {
   background-color: #5B9B37;
   color: #ffffff;
+}
+
+.single-contact-card:hover .bottom-part .icon svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 /* --- 12. SolarGlow Testimonials Cards --- */
