@@ -6,7 +6,7 @@ export const WhatsAppFloat: React.FC = () => {
   const { language, isRTL } = useLanguage();
   const [showTooltip, setShowTooltip] = useState(true);
 
-  const phoneNumber = '201554780003';
+  const phoneNumber = '20109674257';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     language === 'ar'
       ? 'مرحباً، أود الاستفسار من شركة نور الإسلام للأعشاب عن تصدير الأعشاب والبذور العطرية وقائمة الأسعار.'
@@ -15,9 +15,8 @@ export const WhatsAppFloat: React.FC = () => {
 
   return (
     <div
-      className={`fixed bottom-6 z-40 flex items-end gap-3 ${
-        isRTL ? 'left-6 flex-row' : 'right-6 flex-row-reverse'
-      }`}
+      className={`fixed bottom-6 z-40 flex items-end gap-3 ${isRTL ? 'left-6 flex-row' : 'right-6 flex-row-reverse'
+        }`}
     >
       {/* Floating Action Button */}
       <a

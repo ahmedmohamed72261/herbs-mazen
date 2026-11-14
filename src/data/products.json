@@ -2023,7 +2023,7 @@
       "KOSHER"
     ],
     "is_featured": true,
-    "image": "/images/products/nigella_sativa.jpg",
+    "image": "/images/products/black_seed_oil.jpg",
     "images": [
       "/images/products/nigella_sativa.jpg"
     ]
@@ -2062,7 +2062,7 @@
       "HALAL"
     ],
     "is_featured": true,
-    "image": "/images/products/peppermint.jpg",
+    "image": "/images/products/peppermint_oil.jpg",
     "images": [
       "/images/products/peppermint.jpg"
     ]
@@ -2101,7 +2101,7 @@
       "HALAL"
     ],
     "is_featured": true,
-    "image": "/images/products/chamomile.jpg",
+    "image": "/images/products/chamomile_oil.jpg",
     "images": [
       "/images/products/chamomile.jpg"
     ]
@@ -2140,7 +2140,7 @@
       "HALAL"
     ],
     "is_featured": false,
-    "image": "/images/products/anise.jpg",
+    "image": "/images/products/anise_oil.jpg",
     "images": [
       "/images/products/anise.jpg"
     ]
@@ -2179,7 +2179,7 @@
       "HALAL"
     ],
     "is_featured": false,
-    "image": "/images/products/rosemary.jpg",
+    "image": "/images/products/rosemary_oil.jpg",
     "images": [
       "/images/products/rosemary.jpg"
     ]
@@ -2218,7 +2218,7 @@
       "HALAL"
     ],
     "is_featured": false,
-    "image": "/images/products/cumin.jpg",
+    "image": "/images/products/cumin_oil.jpg",
     "images": [
       "/images/products/cumin.jpg"
     ]
@@ -2257,7 +2257,7 @@
       "HALAL"
     ],
     "is_featured": false,
-    "image": "/images/products/thyme.jpg",
+    "image": "/images/products/thyme_oil.jpg",
     "images": [
       "/images/products/thyme.jpg"
     ]
@@ -2297,7 +2297,7 @@
       "KOSHER"
     ],
     "is_featured": true,
-    "image": "/images/products/golden_sesame.jpg",
+    "image": "/images/products/jojoba_oil.jpg",
     "images": [
       "/images/products/golden_sesame.jpg"
     ]

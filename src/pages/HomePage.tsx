@@ -274,8 +274,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
 
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
                   {language === 'ar'
-                    ? 'تعتبر شركة نور الإسلام للأعشاب والزيوت العطرية من أعرق الكيانات المصرية المتخصصة في الزراعة والفرز بالليزر والتصدير البحري، حيث نعتمد على مزارعنا الخصبة في بني سويف ومحطات فرز متطورة مطابقة للمعايير الدولية ودساتير الأدوية الأوروبية والأمريكية.'
-                    : 'Noureslam Herbs is a prominent Egyptian cultivator, essential oil distiller, and global exporter. Headquartered in Beni Suef and Cairo, our integrated processing lines ensure pharmacopoeial purity, optical grading, and hermetic bulk container dispatch.'}
+                    ? 'تعتبر شركة نور الإسلام للأعشاب والزيوت العطرية من أعرق الكيانات المصرية المتخصصة في الزراعة والفرز بالليزر والتصدير البحري، حيث نعتمد على محطات فرز وتجهيز متطورة بأطفيح - محافظة الجيزة ومزارعنا الخصبة على امتداد وادي النيل، مع الامتثال التام للمعايير الدولية ودساتير الأدوية الأوروبية والأمريكية.'
+                    : 'Noureslam Herbs is a prominent Egyptian cultivator, essential oil distiller, and global exporter. Headquartered in Atfih, Giza and Cairo, our integrated processing lines ensure pharmacopoeial purity, optical grading, and hermetic bulk container dispatch.'}
                 </p>
 
                 {/* List items with thumb (SolarGlow list-items) */}
@@ -619,10 +619,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             {/* Project Card 1: European Union */}
             <div className="project-thumb rounded-xl overflow-hidden group">
               <img
-                src="/images/products/peppermint.jpg"
+                src="/images/routes/route_eu.jpg"
                 alt="European Union Trade Route"
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/images/category/herbs.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/images/products/peppermint.jpg';
                 }}
               />
               <div className="project-content">
@@ -634,10 +636,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             {/* Project Card 2: North America */}
             <div className="project-thumb rounded-xl overflow-hidden group">
               <img
-                src="/images/products/chamomile.jpg"
+                src="/images/routes/route_usa.jpg"
                 alt="North American Export Route"
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/images/products/hibiscus.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/images/products/chamomile.jpg';
                 }}
               />
               <div className="project-content">
@@ -649,10 +653,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             {/* Project Card 3: Arab Gulf & Middle East */}
             <div className="project-thumb rounded-xl overflow-hidden group">
               <img
-                src="/images/products/black_seeds.jpg"
+                src="/images/routes/route_gulf.jpg"
                 alt="Arab Gulf Export Route"
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/images/category/seeds.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/images/products/golden_sesame.jpg';
                 }}
               />
               <div className="project-content">
@@ -664,10 +670,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             {/* Project Card 4: Asian Markets */}
             <div className="project-thumb rounded-xl overflow-hidden group">
               <img
-                src="/images/category/oils.jpg"
+                src="/images/routes/route_asia.jpg"
                 alt="Asian Markets Export Route"
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/images/products/lemon_grass.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/images/products/chamomile_oil.jpg';
                 }}
               />
               <div className="project-content">
@@ -679,10 +687,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             {/* Project Card 5: UK & Eastern Europe */}
             <div className="project-thumb rounded-xl overflow-hidden group">
               <img
-                src="/images/products/basil.jpg"
+                src="/images/routes/route_uk.jpg"
                 alt="UK & Global Bulk Export"
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/images/products/rosemary.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/images/products/basil.jpg';
                 }}
               />
               <div className="project-content">
@@ -781,7 +791,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             <div className="flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-4">
                 <a
-                  href="tel:+201554780003"
+                  href="tel:+20109674257"
                   className="w-14 h-14 rounded-full bg-[#F8BC26] text-[#1F242C] flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
                   aria-label="Call Noureslam Export Desk"
                 >
@@ -792,7 +802,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
                     {language === 'ar' ? 'اتصل بمكتب التصدير' : 'Call our export desk'}
                   </p>
                   <h5 className="text-lg font-extrabold text-white">
-                    <a href="tel:+201554780003">+20 15 54780003</a>
+                    <a href="tel:+20109674257">+20 10 9674257</a>
                   </h5>
                 </div>
               </div>

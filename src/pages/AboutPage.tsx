@@ -34,8 +34,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuote }) => {
     {
       q_en: 'Where are your primary farms and processing facilities located?',
       q_ar: 'أين تقع مزارعكم ومجمع التجهيز الرئيسي لشركة نور الإسلام؟',
-      a_en: 'Our primary agricultural lands are concentrated in Beni Suef and Middle Egypt along the Nile Valley, supported by our central sorting, laser grading, and steam sterilization plant in Sumusta Al Waqf, Beni Suef.',
-      a_ar: 'تتركز أراضينا الزراعية الرئيسية في محافظة بني سويف ومصر الوسطى على ضفاف النيل، ويدعمها مجمع التجهيز والغربلة والفرز الليزري والتعقيم في سمسطا الوقف، بني سويف.',
+      a_en: 'Our primary agricultural lands are situated along the fertile Nile Valley, supported by our central sorting, optical grading, and essential oil processing facility in Atfih, Giza Governorate, Egypt.',
+      a_ar: 'تتركز أراضينا الزراعية الخصبة على امتداد وادي النيل، ويدعمها مجمع التجهيز والغربلة والفرز الضوئي ومحطة تقطير واستخلاص الزيوت في مركز أطفيح، محافظة الجيزة، مصر.',
     },
     {
       q_en: 'How do you guarantee batch pesticide-free and organic status?',
@@ -81,9 +81,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuote }) => {
 
                 {/* SolarGlow Floating Green Box Badge */}
                 <div
-                  className={`absolute -bottom-8 ${
-                    isRTL ? '-right-6' : '-left-6'
-                  } bg-[#5B9B37] text-white p-7 rounded-md shadow-2xl border-4 border-white max-w-[290px] z-10`}
+                  className={`absolute -bottom-8 ${isRTL ? '-right-6' : '-left-6'
+                    } bg-[#5B9B37] text-white p-7 rounded-md shadow-2xl border-4 border-white max-w-[290px] z-10`}
                 >
                   <div className="w-12 h-12 rounded-full bg-white text-[#5B9B37] flex items-center justify-center mb-3 shadow-md">
                     <Sprout className="w-6 h-6" />
@@ -283,9 +282,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuote }) => {
                       >
                         <span>{language === 'ar' ? faq.q_ar : faq.q_en}</span>
                         <ChevronDown
-                          className={`w-5 h-5 text-[#5B9B37] flex-shrink-0 transition-transform duration-300 ${
-                            isOpen ? 'rotate-180' : ''
-                          }`}
+                          className={`w-5 h-5 text-[#5B9B37] flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+                            }`}
                         />
                       </button>
 

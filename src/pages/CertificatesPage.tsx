@@ -272,7 +272,7 @@ export const CertificatesPage: React.FC<CertificatesPageProps> = ({ onOpenQuote 
               </button>
 
               <a
-                href="https://wa.me/201554780003"
+                href="https://wa.me/20109674257"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-btn bg-white !text-[#1F242C] hover:!bg-[#F8BC26] hover:!text-[#1F242C]"

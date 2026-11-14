@@ -161,7 +161,7 @@ export const ExportPage: React.FC<ExportPageProps> = ({ onOpenQuote }) => {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#5B9B37]" />
-                  <span><strong>EXW:</strong> Beni Suef Factory Dispatch</span>
+                  <span><strong>EXW:</strong> Atfih, Giza Plant Dispatch</span>
                 </li>
               </ul>
             </div>

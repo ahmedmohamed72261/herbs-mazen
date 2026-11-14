@@ -266,8 +266,8 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuote }) => {
                 type="button"
                 onClick={() => handleCategoryChange('all')}
                 className={`px-4 py-2.5 rounded-md text-xs font-extrabold flex items-center gap-2 shrink-0 transition-all duration-200 border ${activeCategory === 'all'
-                    ? 'bg-[#5B9B37] text-white border-[#5B9B37] shadow-sm'
-                    : 'bg-white text-[#1F242C] border-gray-200 hover:border-[#5B9B37] hover:bg-green-50/40'
+                  ? 'bg-[#5B9B37] text-white border-[#5B9B37] shadow-sm'
+                  : 'bg-white text-[#1F242C] border-gray-200 hover:border-[#5B9B37] hover:bg-green-50/40'
                   }`}
               >
                 <LayoutGrid className="w-3.5 h-3.5" />
@@ -293,10 +293,10 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuote }) => {
                     type="button"
                     onClick={() => handleCategoryChange(cat.slug)}
                     className={`px-4 py-2.5 rounded-md text-xs font-extrabold flex items-center gap-2 shrink-0 transition-all duration-200 border ${isActive
-                        ? 'bg-[#5B9B37] text-white border-[#5B9B37] shadow-sm'
-                        : isOils
-                          ? 'bg-amber-50/60 text-[#1F242C] border-amber-200 hover:border-[#F8BC26] hover:bg-amber-100/50'
-                          : 'bg-white text-[#1F242C] border-gray-200 hover:border-[#5B9B37] hover:bg-green-50/40'
+                      ? 'bg-[#5B9B37] text-white border-[#5B9B37] shadow-sm'
+                      : isOils
+                        ? 'bg-amber-50/60 text-[#1F242C] border-amber-200 hover:border-[#F8BC26] hover:bg-amber-100/50'
+                        : 'bg-white text-[#1F242C] border-gray-200 hover:border-[#5B9B37] hover:bg-green-50/40'
                       }`}
                   >
                     <IconComponent
@@ -306,10 +306,10 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuote }) => {
                     <span>{language === 'ar' ? cat.name_ar : cat.name_en}</span>
                     <span
                       className={`text-[11px] px-1.5 py-0.5 rounded-full ${isActive
-                          ? 'bg-white/20 text-white'
-                          : isOils
-                            ? 'bg-amber-200/60 text-amber-900'
-                            : 'bg-gray-100 text-gray-600'
+                        ? 'bg-white/20 text-white'
+                        : isOils
+                          ? 'bg-amber-200/60 text-amber-900'
+                          : 'bg-gray-100 text-gray-600'
                         }`}
                     >
                       {count}
@@ -402,10 +402,10 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuote }) => {
                         <span className="flex items-center gap-2.5 truncate">
                           <IconComponent
                             className={`w-4 h-4 shrink-0 ${isActive
-                                ? 'text-white'
-                                : cat.slug === 'oils'
-                                  ? 'text-[#F8BC26]'
-                                  : 'text-[#5B9B37]'
+                              ? 'text-white'
+                              : cat.slug === 'oils'
+                                ? 'text-[#F8BC26]'
+                                : 'text-[#5B9B37]'
                               }`}
                           />
                           <span className="truncate">{language === 'ar' ? cat.name_ar : cat.name_en}</span>
@@ -430,8 +430,8 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuote }) => {
                       type="button"
                       onClick={() => setActiveForm(form.id)}
                       className={`w-full flex items-center justify-between px-3 py-2 text-xs font-semibold rounded-[4px] transition-colors text-start ${activeForm === form.id
-                          ? 'bg-[#5B9B37] text-white font-bold'
-                          : 'bg-[#F9FAFB] text-gray-700 hover:bg-gray-100'
+                        ? 'bg-[#5B9B37] text-white font-bold'
+                        : 'bg-[#F9FAFB] text-gray-700 hover:bg-gray-100'
                         }`}
                     >
                       <span>{language === 'ar' ? form.label_ar : form.label_en}</span>
@@ -469,13 +469,13 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuote }) => {
                     </button>
 
                     <a
-                      href="https://wa.me/201554780003"
+                      href="https://wa.me/20109674257"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full flex items-center justify-center gap-2 py-2 px-3 bg-white/10 hover:bg-white/20 text-white rounded-[4px] text-xs font-bold transition-colors"
                     >
                       <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
-                      <span>{language === 'ar' ? 'تواصل عبر واتساب (+20 15 54780003)' : 'WhatsApp Desk (+20 15 54780003)'}</span>
+                      <span>{language === 'ar' ? 'تواصل عبر واتساب (+20 10 9674257)' : 'WhatsApp Desk (+20 10 9674257)'}</span>
                     </a>
                   </div>
                 </div>
@@ -747,8 +747,8 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuote }) => {
                       type="button"
                       onClick={() => setActiveForm(form.id)}
                       className={`w-full flex items-center justify-between px-3 py-2 text-xs font-semibold rounded-[4px] text-start ${activeForm === form.id
-                          ? 'bg-[#5B9B37] text-white font-bold'
-                          : 'bg-[#F9FAFB] text-gray-700'
+                        ? 'bg-[#5B9B37] text-white font-bold'
+                        : 'bg-[#F9FAFB] text-gray-700'
                         }`}
                     >
                       <span>{language === 'ar' ? form.label_ar : form.label_en}</span>

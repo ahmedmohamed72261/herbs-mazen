@@ -257,12 +257,12 @@ export const translations = {
       address: 'Address',
       phoneNumber: 'Phone',
       emailAddress: 'Email',
-      addressFull: 'Sumusta Al Waqf – Beni Suef Governorate – Egypt',
-      emailSales: 'sales@greenherbseg.com',
+      addressFull: 'Atfih – Giza Governorate – Egypt',
+      emailSales: 'sales@noureslamherbs.com',
     },
     contactPage: {
       heroBadge: 'Global Trade Inquiries',
-      addressText: 'Sumusta Al Waqf – Beni Suef Governorate – Egypt',
+      addressText: 'Atfih – Giza Governorate – Egypt',
       locationLabel: 'Processing Facility',
     },
     catalog: {
@@ -540,12 +540,12 @@ export const translations = {
       address: 'العنوان',
       phoneNumber: 'الهاتف',
       emailAddress: 'البريد الإلكتروني',
-      addressFull: 'سمسطا الوقف – محافظة بني سويف – جمهورية مصر العربية',
-      emailSales: 'sales@greenherbseg.com',
+      addressFull: 'مركز أطفيح – محافظة الجيزة – جمهورية مصر العربية',
+      emailSales: 'sales@noureslamherbs.com',
     },
     contactPage: {
       heroBadge: 'استفسارات التجارة العالمية',
-      addressText: 'سمسطا الوقف – محافظة بني سويف – جمهورية مصر العربية',
+      addressText: 'مركز أطفيح – محافظة الجيزة – جمهورية مصر العربية',
       locationLabel: 'مرفق المعالجة والتجهيز',
     },
     catalog: {

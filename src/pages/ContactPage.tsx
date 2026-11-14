@@ -129,11 +129,11 @@ export const ContactPage: React.FC = () => {
               <div className="bottom-part">
                 <div className="info">
                   <p>
-                    <a href="tel:+201554780003">+20 15 54780003</a>
+                    <a href="tel:+20109674257">+20 10 9674257</a>
                   </p>
                   <p>
-                    <a href="https://wa.me/201554780003" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-bold">
-                      WhatsApp: +20 15 54780003
+                    <a href="https://wa.me/20109674257" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-bold">
+                      WhatsApp: +20 10 9674257
                     </a>
                   </p>
                 </div>
@@ -151,13 +151,13 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <div className="title">
                   <h4>{language === 'ar' ? 'مقر الإدارة والمصنع' : 'Office Address'}</h4>
-                  <span>{language === 'ar' ? 'المنطقة الصناعية ببني سويف' : 'Sumusta Al Waqf, Beni Suef'}</span>
+                  <span>{language === 'ar' ? 'مركز أطفيح، محافظة الجيزة' : 'Atfih, Giza Governorate'}</span>
                 </div>
               </div>
 
               <div className="bottom-part">
                 <div className="info">
-                  <p>{language === 'ar' ? 'سمسطا الوقف - محافظة بني سويف' : 'Industrial Zone, Beni Suef'}</p>
+                  <p>{language === 'ar' ? 'مركز أطفيح - محافظة الجيزة' : 'Atfih Center, Giza Governorate'}</p>
                   <p>{language === 'ar' ? 'جمهورية مصر العربية' : 'Egypt, North Africa'}</p>
                 </div>
                 <div className="icon">
@@ -170,7 +170,7 @@ export const ContactPage: React.FC = () => {
           {/* Embedded Map Wrapper */}
           <div className="office-google-map-wrapper rounded-md overflow-hidden shadow-xl border border-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111244.64696045618!2d30.957591343749997!3d28.919246899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145a1e7bb2f97973%3A0x6b77242ba4930d63!2sBeni%20Suef%2C%20Egypt!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111000!2d31.25!3d29.42!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1459a9307c082855%3A0xb3a56e07bc36a536!2sAtfih%2C%20Giza%20Governorate%2C%20Egypt!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg"
               width="100%"
               height="450"
               style={{ border: 0 }}

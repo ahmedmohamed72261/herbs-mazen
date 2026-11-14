@@ -108,7 +108,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
     }
   };
 
-  const whatsappUrl = `https://wa.me/201554780003?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/20109674257?text=${encodeURIComponent(
     language === 'ar'
       ? `مرحباً، أود الاستفسار من شركة نور الإسلام للأعشاب عن عرض سعر وتفاصيل شحن محصول: ${title}`
       : `Hello Noureslam Herbs team, I would like to inquire about specifications and shipping for: ${title}`

@@ -58,11 +58,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
           {/* Contact Details */}
           <div className="flex items-center gap-6">
             <a
-              href="tel:+201554780003"
+              href="tel:+20109674257"
               className="flex items-center gap-1.5 hover:text-[#5B9B37] transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#5B9B37]" />
-              <span>+20 15 54780003</span>
+              <span>+20 10 9674257</span>
             </a>
             <a
               href="mailto:sales@noureslamherbs.com"
@@ -73,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
             </a>
             <div className="flex items-center gap-1.5 text-gray-400 hidden lg:flex">
               <MapPin className="w-3.5 h-3.5 text-[#F8BC26]" />
-              <span>{language === 'ar' ? 'بني سويف والقاهرة، جمهورية مصر العربية' : 'Beni Suef & Cairo, Egypt'}</span>
+              <span>{language === 'ar' ? 'أطفيح، محافظة الجيزة، جمهورية مصر العربية' : 'Atfih, Giza, Egypt'}</span>
             </div>
           </div>
 
@@ -256,7 +256,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
               </div>
 
               <div className="text-[11px] text-gray-500 text-center pt-2">
-                <p>+20 15 54780003</p>
+                <p>+20 10 9674257 (0109674257)</p>
                 <p>sales@noureslamherbs.com</p>
               </div>
             </div>
